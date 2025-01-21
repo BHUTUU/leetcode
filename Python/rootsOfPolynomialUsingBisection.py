@@ -4,11 +4,9 @@ class RootsOfPolynomialUsingBisection:
         self.a=[]
         self.b=[]
         self.num_iterations = 0
-    @staticmethod
-    def _is_positive(num):
+    def _is_positive(self, num):
         return num > 0
-    @staticmethod
-    def _is_negative(num):
+    def _is_negative(self, num):
         return num < 0
     def get_roots(self, a, b, tolerance):
         if (self._is_positive(self.polynomial(a)) and self._is_negative(self.polynomial(b))) or (self._is_positive(self.polynomial(b)) and self._is_negative(self.polynomial(a))):
