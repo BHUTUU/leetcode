@@ -8,8 +8,8 @@ class RootsOfPolynomialUsingBisection:
         tolerance = abs(tolerance)
         root_lies_between = [a,b]
         try:
-            a=list(filter(lambda x: self.polynomial(x)<0, root_lies_between))[0] # this is to filter the value of x from give roots for which the function returns a negative number
-            b=list(filter(lambda x: self.polynomial(x)>0, root_lies_between))[0] # this is to filter the value of x from give roots for which the function returns a positive number
+            a=list(filter(lambda x: self.polynomial(x)<0, root_lies_between))[0]
+            b=list(filter(lambda x: self.polynomial(x)>0, root_lies_between))[0]
         except IndexError:
             raise ValueError("The given interval does not contain a root")
         self.a_history.append(a)
